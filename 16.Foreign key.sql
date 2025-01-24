@@ -66,3 +66,20 @@ select * from weapon;
 drop table weapon;
 drop table avengers_enemy;
 drop table avengers;
+
+select *from avengers as a
+join avengers_enemy as ae
+on a.ar_id=ae.ar_id;
+
+
+
+
+select sum(a.ar_id * ae.ae_id ) as totalrevenue from avengers as a
+join avengers_enemy as ae 
+on a.ar_id = ae.ar_id;
+
+
+delete from avengers
+where heroic_name <'Spider-Man';
+
+select * from avengers; 
